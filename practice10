@@ -1,0 +1,16 @@
+Type Inference — это механизм, с помощью которого компилятор автоматически определяет тип переменной на основе значения, которое ей присваивается. В Java type inference реализован через ключевое слово var 
+public class Main {
+    public static void main(String[] args) {
+        // Переменная var автоматически получает тип String
+        var message = "Hello, world!";
+        System.out.println(message); // Вывод: Hello, world!
+
+        // var для чисел
+        var number = 42; // Компилятор определяет тип как int
+        System.out.println(number); // Вывод: 42
+
+        // Использование var с коллекциями
+        var list = List.of(1, 2, 3, 4);
+        System.out.println("List: " + list);
+    }
+}
