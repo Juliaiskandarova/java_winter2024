@@ -1,0 +1,51 @@
+//Использование break в цикле for
+
+public class BreakExample {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 10; i++) {
+            if (i == 5) { // Условие для завершения цикла
+                System.out.println("Цикл прерывается на i = " + i);
+                break; // Выход из цикла
+            }
+            System.out.println("Итерация: " + i);
+        }
+        System.out.println("Цикл завершен.");
+    }
+}
+
+//Использование continue в цикле for
+//Оператор continue пропускает текущую итерацию цикла и переходит к следующей.
+
+
+public class ContinueExample {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 5; i++) {
+            if (i == 3) { // Условие для пропуска итерации
+                System.out.println("Итерация " + i + " пропущена.");
+                continue; // Переход к следующей итерации
+            }
+            System.out.println("Итерация: " + i);
+        }
+        System.out.println("Цикл завершен.");
+    }
+}
+
+//Использование break и continue в бесконечном цикле while
+
+public class BreakAndContinueWhile {
+    public static void main(String[] args) {
+        int i = 0;
+        while (true) { // Бесконечный цикл
+            i++;
+            if (i == 3) {
+                System.out.println("Итерация " + i + " пропущена с помощью continue.");
+                continue; // Пропуск текущей итерации
+            }
+            if (i == 5) {
+                System.out.println("Цикл завершен с использованием break на i = " + i);
+                break; // Выход из цикла
+            }
+            System.out.println("Итерация: " + i);
+        }
+    }
+}
