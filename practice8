@@ -1,0 +1,18 @@
+public class Main {
+    public static void main(String[] args) {
+        // Пример 1: int → byte
+        int intVal = 130;
+        byte byteVal = (byte) intVal;
+        System.out.println("int to byte: " + byteVal); // -126 (переполнение, т.к. диапазон byte: -128 до 127)
+
+        // Пример 2: double → int
+        double doubleVal = 5.99;
+        int intResult = (int) doubleVal;
+        System.out.println("double to int: " + intResult); // 5 (дробная часть отбрасывается)
+
+        // Пример 3: long → short
+        long longVal = 100000;
+        short shortVal = (short) longVal;
+        System.out.println("long to short: " + shortVal); // 34464 (переполнение)
+    }
+}
