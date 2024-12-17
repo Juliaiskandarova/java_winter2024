@@ -1,0 +1,7 @@
+public class Main {
+    public static void main(String[] args) {
+        String text = "Hello";
+        int num = 42;
+        System.out.println("Конкатенация строки и числа: " + text + num); // "Hello42"
+    }
+}
