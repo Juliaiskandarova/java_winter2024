@@ -1,0 +1,19 @@
+public class Main {
+    public static void main(String[] args) {
+        // Пример 1: int + double
+        int intVal = 10;
+        double doubleVal = 5.5;
+        double result1 = intVal + doubleVal;
+        System.out.println("int + double: " + result1); // 15.5 (int преобразуется в double)
+
+        // Пример 2: byte + int
+        byte byteVal = 50;
+        int result2 = byteVal + intVal;
+        System.out.println("byte + int: " + result2); // 60 (byte преобразуется в int)
+
+        // Пример 3: char + int
+        char charVal = 'A'; // Код символа 'A' = 65
+        int result3 = charVal + intVal;
+        System.out.println("char + int: " + result3); // 75 ('A' преобразуется в 65)
+    }
+}
