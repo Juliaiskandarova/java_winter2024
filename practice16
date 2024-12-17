@@ -1,0 +1,11 @@
+public class AutoUnboxingExample {
+    public static void main(String[] args) {
+        Integer num = null;
+
+        try {
+            int value = num; // Автораспаковка из null
+        } catch (NullPointerException e) {
+            System.out.println("NullPointerException при автораспаковке!"); // Это произойдет
+        }
+    }
+}
