@@ -1,0 +1,15 @@
+public class Main {
+    public static void main(String[] args) {
+        int x = 5;
+
+        // Префиксная форма
+        System.out.println("Префиксный инкремент: " + (++x)); // 6
+        System.out.println("Префиксный декремент: " + (--x)); // 5
+
+        // Постфиксная форма
+        System.out.println("Постфиксный инкремент: " + (x++)); // 5
+        System.out.println("Значение после инкремента: " + x); // 6
+        System.out.println("Постфиксный декремент: " + (x--)); // 6
+        System.out.println("Значение после декремента: " + x); // 5
+    }
+}
