@@ -1,0 +1,68 @@
+/**
+ * Класс представляет простую калькуляторную программу.
+ * Предоставляет методы для базовых арифметических операций.
+ */
+public class Calculator {
+
+    /**
+     * Суммирует два числа.
+     *
+     * @param a первое число
+     * @param b второе число
+     * @return результат сложения a и b
+     */
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    /**
+     * Вычитает одно число из другого.
+     *
+     * @param a уменьшаемое
+     * @param b вычитаемое
+     * @return результат вычитания b из a
+     */
+    public int subtract(int a, int b) {
+        return a - b;
+    }
+
+    /**
+     * Умножает два числа.
+     *
+     * @param a первое число
+     * @param b второе число
+     * @return результат умножения a на b
+     */
+    public int multiply(int a, int b) {
+        return a * b;
+    }
+
+    /**
+     * Делит одно число на другое.
+     *
+     * @param a делимое
+     * @param b делитель (должен быть ненулевым)
+     * @return результат деления a на b
+     * @throws ArithmeticException если b равно 0
+     */
+    public double divide(int a, int b) throws ArithmeticException {
+        if (b == 0) {
+            throw new ArithmeticException("Деление на ноль недопустимо.");
+        }
+        return (double) a / b;
+    }
+
+    /**
+     * Точка входа в программу.
+     * Демонстрирует использование методов класса {@code Calculator}.
+     *
+     * @param args аргументы командной строки
+     */
+    public static void main(String[] args) {
+        Calculator calculator = new Calculator();
+        System.out.println("Сложение: " + calculator.add(5, 3));
+        System.out.println("Вычитание: " + calculator.subtract(5, 3));
+        System.out.println("Умножение: " + calculator.multiply(5, 3));
+        System.out.println("Деление: " + calculator.divide(5, 3));
+    }
+}
