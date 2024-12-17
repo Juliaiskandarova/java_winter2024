@@ -1,0 +1,32 @@
+public class Main {
+    public static void main(String[] args) {
+        // Пример с базовым типом
+        int number = 42;
+        String text = "The answer is: ";
+        String result1 = text + number; 
+        System.out.println(result1); // Вывод: The answer is: 42
+
+        // Пример с объектом
+        MyClass myObject = new MyClass("Hello, world!");
+        String result2 = "Message from object: " + myObject;
+        System.out.println(result2); // Вывод: Message from object: Hello, world!
+
+        // Пример со смешанными типами
+        double pi = 3.14159;
+        String mixedResult = text + number + " and PI is " + pi;
+        System.out.println(mixedResult); // Вывод: The answer is: 42 and PI is 3.14159
+    }
+}
+
+class MyClass {
+    private String message;
+
+    public MyClass(String message) {
+        this.message = message;
+    }
+
+    @Override
+    public String toString() {
+        return message; 
+    }
+}
