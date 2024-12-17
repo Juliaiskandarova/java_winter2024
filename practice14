@@ -1,0 +1,19 @@
+public class DecodeExample {
+    public static void main(String[] args) {
+        // Десятичное число
+        Integer decimal = Integer.decode("123");
+        System.out.println("Десятичное: " + decimal); // 123
+
+        // Восьмеричное число (начинается с 0)
+        Integer octal = Integer.decode("0123");
+        System.out.println("Восьмеричное: " + octal); // 83 (0o123 = 83 в десятичной)
+
+        // Шестнадцатеричное число (начинается с 0x или 0X)
+        Integer hex = Integer.decode("0x1A3");
+        System.out.println("Шестнадцатеричное: " + hex); // 419
+
+        // Отрицательное число
+        Integer negative = Integer.decode("-456");
+        System.out.println("Отрицательное: " + negative); // -456
+    }
+}
