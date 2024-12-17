@@ -1,0 +1,17 @@
+Конструктор (устарел, с версии Java 9 помечен как deprecated):
+
+Boolean b1 = new Boolean(true); // Устаревший способ
+Boolean b2 = new Boolean("true");
+
+Статический метод valueOf() (рекомендуемый способ):
+
+
+Boolean b3 = Boolean.valueOf(true);        // true
+Boolean b4 = Boolean.valueOf("true");     // true
+Boolean b5 = Boolean.valueOf("false");    // false
+Boolean b6 = Boolean.valueOf("not_true"); // false (если строка не "true")
+
+Прямое присваивание (автоупаковка):
+
+Boolean b7 = true;
+Boolean b8 = false;
