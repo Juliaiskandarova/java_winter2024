@@ -1,0 +1,21 @@
+import java.util.StringJoiner;
+
+public class StringJoinerDemo {
+    public static void main(String[] args) {
+        // Создание StringJoiner с разделителем
+        StringJoiner sj = new StringJoiner(", ");
+        sj.add("Apple").add("Banana").add("Cherry");
+        System.out.println("Joined string: " + sj);
+
+        // Создание StringJoiner с разделителем, префиксом и суффиксом
+        StringJoiner sj2 = new StringJoiner(", ", "[", "]");
+        sj2.add("Dog").add("Cat").add("Bird");
+        System.out.println("Joined string with prefix and suffix: " + sj2);
+
+        // Объединение двух StringJoiner
+        StringJoiner sj3 = new StringJoiner("; ");
+        sj3.add("Python").add("Java");
+        sj.merge(sj3);
+        System.out.println("Merged StringJoiner: " + sj);
+    }
+}
