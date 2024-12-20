@@ -1,0 +1,21 @@
+public class ConversionDemo {
+    public static void main(String[] args) {
+        String str = "Hello";
+
+        // String → StringBuffer/StringBuilder
+        StringBuffer sb = new StringBuffer(str);
+        StringBuilder sBuilder = new StringBuilder(str);
+
+        // StringBuffer → String/StringBuilder
+        String strFromBuffer = sb.toString();
+        StringBuilder builderFromBuffer = new StringBuilder(sb);
+
+        // StringBuilder → String/StringBuffer
+        String strFromBuilder = sBuilder.toString();
+        StringBuffer bufferFromBuilder = new StringBuffer(sBuilder);
+
+        System.out.println("Original String: " + str);
+        System.out.println("From StringBuffer: " + strFromBuffer);
+        System.out.println("From StringBuilder: " + strFromBuilder);
+    }
+}
