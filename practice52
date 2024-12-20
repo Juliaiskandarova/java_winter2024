@@ -1,1 +1,38 @@
+public class StringMethodsDemo {
+    public static void main(String[] args) {
+        String str = "Hello, World!";
+        String str2 = "hello";
+
+        // 1. length(): возвращает длину строки
+        System.out.println("Length: " + str.length());
+
+        // 2. charAt(): возвращает символ по указанному индексу
+        System.out.println("Character at index 1: " + str.charAt(1));
+
+        // 3. substring(): возвращает подстроку
+        System.out.println("Substring (7, 12): " + str.substring(7, 12));
+
+        // 4. contains(): проверяет, содержит ли строка заданную подстроку
+        System.out.println("Contains 'World': " + str.contains("World"));
+
+        // 5. equals(): сравнивает строки
+        System.out.println("Equals 'hello': " + str.equals(str2));
+
+        // 6. equalsIgnoreCase(): сравнивает строки без учета регистра
+        System.out.println("EqualsIgnoreCase 'hello': " + str.equalsIgnoreCase(str2));
+
+        // 7. toUpperCase(): переводит строку в верхний регистр
+        System.out.println("Uppercase: " + str.toUpperCase());
+
+        // 8. toLowerCase(): переводит строку в нижний регистр
+        System.out.println("Lowercase: " + str.toLowerCase());
+
+        // 9. replace(): заменяет все вхождения одного символа/строки на другой
+        System.out.println("Replace 'World' with 'Java': " + str.replace("World", "Java"));
+
+        // 10. trim(): удаляет пробелы в начале и конце строки
+        String str3 = "   Extra spaces   ";
+        System.out.println("Trimmed string: '" + str3.trim() + "'");
+    }
+}
 
