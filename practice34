@@ -1,0 +1,36 @@
+class Parent {
+    public Parent(String name) {
+        System.out.println("Parent constructor: " + name);
+    }
+
+    public void display() {
+        System.out.println("Method from Parent class");
+    }
+}
+
+class Child extends Parent {
+    public Child(String name) {
+        super(name); // Вызов конструктора суперкласса
+    }
+
+    @Override
+    public void display() {
+        super.display(); // Вызов метода суперкласса
+        System.out.println("Method from Child class");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Child child = new Child("Example");
+        child.display();
+    }
+}
+
+//this используется для ссылки на текущий объект или его методы:
+
+//Для различения переменных объекта от параметров: this.fieldName.
+
+//super используется для ссылки на элементы суперкласса:
+
+//Для вызова метода суперкласса: super.methodName().
