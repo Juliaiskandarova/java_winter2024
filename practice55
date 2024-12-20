@@ -1,0 +1,45 @@
+public class StringBufferBuilderDemo {
+    public static void main(String[] args) {
+        // Используем StringBuffer
+        StringBuffer sb = new StringBuffer("Hello");
+
+        // 1. append(): добавляет строку
+        sb.append(", World!");
+        System.out.println("After append: " + sb);
+
+        // 2. insert(): вставляет строку на определённой позиции
+        sb.insert(5, " Java");
+        System.out.println("After insert: " + sb);
+
+        // 3. replace(): заменяет часть строки
+        sb.replace(6, 10, "Beautiful");
+        System.out.println("After replace: " + sb);
+
+        // 4. delete(): удаляет часть строки
+        sb.delete(6, 15);
+        System.out.println("After delete: " + sb);
+
+        // 5. reverse(): переворачивает строку
+        sb.reverse();
+        System.out.println("After reverse: " + sb);
+
+        // Используем StringBuilder
+        StringBuilder sb2 = new StringBuilder("StringBuilder Example");
+
+        // 6. length(): возвращает длину строки
+        System.out.println("Length: " + sb2.length());
+
+        // 7. charAt(): возвращает символ по индексу
+        System.out.println("Character at index 5: " + sb2.charAt(5));
+
+        // 8. substring(): возвращает подстроку
+        System.out.println("Substring (0, 10): " + sb2.substring(0, 10));
+
+        // 9. capacity(): возвращает текущую ёмкость
+        System.out.println("Capacity: " + sb2.capacity());
+
+        // 10. setLength(): изменяет длину строки
+        sb2.setLength(10);
+        System.out.println("After setLength: " + sb2);
+    }
+}
