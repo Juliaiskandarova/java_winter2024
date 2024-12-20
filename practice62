@@ -1,0 +1,12 @@
+public class DualExceptionExample {
+    public static void main(String[] args) {
+        try {
+            throw new ArithmeticException("Первое исключение");
+        } catch (ArithmeticException e) {
+            System.out.println("Обработано: " + e.getMessage());
+        }
+
+        // Второе исключение не перехватывается
+        throw new NullPointerException("Второе исключение приводит к аварийной остановке");
+    }
+}
