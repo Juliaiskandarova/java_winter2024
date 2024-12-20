@@ -1,0 +1,20 @@
+class OverloadedVarArgs {
+    // Метод с одним параметром
+    public void display(int a) {
+        System.out.println("Один параметр: " + a);
+    }
+
+    // Метод с переменным числом параметров
+    public void display(int... values) {
+        System.out.println("Переменное число параметров: ");
+        for (int value : values) {
+            System.out.println(value);
+        }
+    }
+
+    public static void main(String[] args) {
+        OverloadedVarArgs obj = new OverloadedVarArgs();
+        obj.display(5);               // Вызов метода с одним параметром
+        obj.display(1, 2, 3, 4, 5);   // Вызов метода с переменным числом параметров
+    }
+}
