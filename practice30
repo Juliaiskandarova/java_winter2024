@@ -1,0 +1,8 @@
+В цикле for (1) элементы массива num имеют тип Number, и метод printNum(Number n) вызывается для каждого элемента. Это связано с тем, что тип массива — Number[].
+
+В вызовах (2) тип передаваемого аргумента позволяет выбрать более специфичный метод:
+
+a.printNum(new Integer(1)) вызывает printNum(Integer i).
+a.printNum(11) вызывает printNum(int i).
+a.printNum(1.11f) вызывает printNum(Float f).
+a.printNum(11.11) вызывает printNum(Number n) (так как нет метода для double).
