@@ -1,0 +1,30 @@
+interface Interface1 {
+    default void method() {
+        System.out.println("Interface1 method");
+    }
+}
+
+interface Interface2 {
+    default void method() {
+        System.out.println("Interface2 method");
+    }
+}
+
+class MyClass implements Interface1, Interface2 {
+    @Override
+    public void method() {
+        // Разрешение конфликта
+        Interface1.super.method(); // Вызов метода из Interface1
+        Interface2.super.method(); // Вызов метода из Interface2
+        System.out.println("Combined implementation");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        MyClass obj = new MyClass();
+        obj.method();
+    }
+}
+//Если методы имеют одинаковую сигнатуру (имя и параметры), класс может реализовать метод один раз, и он будет удовлетворять требованиям обоих интерфейсов.
+//Если методы имеют разные сигнатуры, возникает конфликт, который необходимо разрешить.
