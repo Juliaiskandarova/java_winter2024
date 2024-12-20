@@ -1,0 +1,42 @@
+class Parent {
+    public int value;
+
+    public Parent(int value) {
+        this.value = value;
+        System.out.println("Parent constructor: value = " + value);
+    }
+
+    public void display() {
+        System.out.println("Method from Parent: value = " + value);
+    }
+}
+
+class Child extends Parent {
+    public int value;
+
+    public Child(int parentValue, int childValue) {
+        super(parentValue); // Вызов конструктора суперкласса
+        this.value = childValue;
+    }
+
+    public void displayValues() {
+        System.out.println("Child value = " + value);
+        System.out.println("Parent value = " + super.value); // Доступ к полю суперкласса
+    }
+
+    public void callParentMethod() {
+        super.display(); // Вызов метода суперкласса
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Child child = new Child(10, 20);
+        child.displayValues();
+        child.callParentMethod();
+    }
+}
+
+//Вызов конструктора суперкласса.
+//Доступ к методам суперкласса.
+//Доступ к полям суперкласса.
