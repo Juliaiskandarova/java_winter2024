@@ -1,0 +1,60 @@
+//Пример перегрузки:
+class OverloadingExample {
+    // Метод с одним параметром
+    public void display(int number) {
+        System.out.println("Число: " + number);
+    }
+
+    // Перегруженный метод с другим типом параметра
+    public void display(String text) {
+        System.out.println("Текст: " + text);
+    }
+
+    // Перегруженный метод с двумя параметрами
+    public void display(int number, String text) {
+        System.out.println("Число: " + number + ", Текст: " + text);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        OverloadingExample example = new OverloadingExample();
+        example.display(42); // Вызов метода с int
+        example.display("Привет, мир!"); // Вызов метода с String
+        example.display(42, "Перегрузка методов"); // Вызов метода с двумя параметрами
+    }
+}
+
+
+
+
+
+//Пример переопределения:
+// Родительский класс
+class Parent {
+    public void display() {
+        System.out.println("Это метод из родительского класса.");
+    }
+}
+
+// Наследник
+class Child extends Parent {
+    // Переопределение метода
+    @Override
+    public void display() {
+        System.out.println("Это метод из класса-наследника.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Parent parent = new Parent();
+        parent.display(); // Вызов метода родительского класса
+
+        Child child = new Child();
+        child.display(); // Вызов переопределенного метода
+
+        Parent polymorphicReference = new Child();
+        polymorphicReference.display(); // Вызов переопределенного метода через полиморфизм
+    }
+}
