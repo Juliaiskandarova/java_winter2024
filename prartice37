@@ -1,0 +1,17 @@
+final class FinalClass {
+    public void display() {
+        System.out.println("This is a final class.");
+    }
+}
+
+// Попытка наследования вызовет ошибку компиляции
+// class Child extends FinalClass {
+// }
+
+public class Main {
+    public static void main(String[] args) {
+        FinalClass finalClass = new FinalClass();
+        finalClass.display();
+    }
+}
+//Компилятор выдаст ошибку при попытке наследования от final класса.
