@@ -1,0 +1,24 @@
+interface MyInterface {
+    default void defaultMethod() {
+        System.out.println("Default method in the interface");
+    }
+
+    static void staticMethod() {
+        System.out.println("Static method in the interface");
+    }
+}
+
+class MyClass implements MyInterface {
+    // Класс может использовать метод по умолчанию без переопределения
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Вызов метода по умолчанию через объект
+        MyClass obj = new MyClass();
+        obj.defaultMethod();
+
+        // Вызов статического метода через имя интерфейса
+        MyInterface.staticMethod();
+    }
+}
