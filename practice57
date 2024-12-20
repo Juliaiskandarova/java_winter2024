@@ -1,0 +1,15 @@
+public class FormatExample {
+    public static void main(String[] args) {
+        boolean boolValue = true;
+        char charValue = 'A';
+        int intValue = 123;
+        double floatValue = 123.45;
+        String stringValue = "Hello, World!";
+
+        System.out.printf("Логическое значение: %b%n", boolValue); // %b
+        System.out.printf("Символьное значение: %c%n", charValue); // %c
+        System.out.printf("Целое число: %d%n", intValue); // %d
+        System.out.printf("Число с плавающей точкой: %.2f%n", floatValue); // %f
+        System.out.printf("Строка: %s%n", stringValue); // %s
+    }
+}
