@@ -1,0 +1,12 @@
+//Интерфейс, объявленный без модификатора доступа, имеет область видимости по умолчанию (package-private). Это означает, что:
+//Интерфейс доступен только для классов и других интерфейсов внутри того же пакета.
+interface Interface {
+    void method();
+}
+
+class Example implements Interface {
+    @Override
+    public void method() {
+        System.out.println("Implemented method");
+    }
+}
