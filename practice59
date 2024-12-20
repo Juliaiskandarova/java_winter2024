@@ -1,0 +1,13 @@
+import java.util.Date;
+
+public class TimeFormatExample {
+    public static void main(String[] args) {
+        Date date = new Date();
+
+        System.out.printf("Часы (24-часовой формат): %tH%n", date); // %tH
+        System.out.printf("Часы (12-часовой формат): %tI%n", date); // %tI
+        System.out.printf("Минуты: %tM%n", date); // %tM
+        System.out.printf("Название месяца: %tB%n", date); // %tB
+        System.out.printf("Год (полный): %tY%n", date); // %tY
+    }
+}
