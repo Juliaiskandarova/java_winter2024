@@ -1,0 +1,17 @@
+//Ошибка компиляции.
+//Интерфейсы не могут быть объявлены с модификатором private, так как:
+
+//Интерфейс предназначен для реализации другими классами, а private запрещает доступ за пределами содержащего его класса.
+//Интерфейс может быть объявлен private, если он является частью другого класса или интерфейса (вложенный интерфейс).
+class Outer {
+    private interface InnerInterface {
+        void method();
+    }
+
+    static class InnerClass implements InnerInterface {
+        @Override
+        public void method() {
+            System.out.println("Implemented private interface");
+        }
+    }
+}
