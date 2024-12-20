@@ -1,0 +1,25 @@
+//При объявлении:
+
+public class A {
+    public final int a = 42;
+}
+
+//Через конструктор:
+
+public class A {
+    public final int a;
+
+    public A(int value) {
+        this.a = value;
+    }
+}
+
+//В блоке инициализации:
+
+public class A {
+    public final int a;
+
+    {
+        a = 10;
+    }
+}
