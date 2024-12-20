@@ -1,0 +1,47 @@
+public class ExceptionsExample {
+    public static void main(String[] args) {
+        // ArithmeticException
+        try {
+            int result = 10 / 0;
+        } catch (ArithmeticException e) {
+            System.out.println("Ошибка: Деление на ноль.");
+        }
+
+        // ArrayIndexOutOfBoundsException
+        try {
+            int[] array = {1, 2, 3};
+            System.out.println(array[5]);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Ошибка: Индекс массива вне границ.");
+        }
+
+        // IllegalArgumentException
+        try {
+            setPositiveNumber(-10);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Ошибка: Недопустимый аргумент.");
+        }
+
+        // ClassCastException
+        try {
+            Object x = "Hello";
+            Integer y = (Integer) x;
+        } catch (ClassCastException e) {
+            System.out.println("Ошибка: Несовместимое приведение типов.");
+        }
+
+        // NullPointerException
+        try {
+            String str = null;
+            System.out.println(str.length());
+        } catch (NullPointerException e) {
+            System.out.println("Ошибка: Обращение к null.");
+        }
+    }
+
+    public static void setPositiveNumber(int number) {
+        if (number < 0) {
+            throw new IllegalArgumentException("Число должно быть положительным.");
+        }
+    }
+}
