@@ -1,0 +1,22 @@
+class Parent {
+    public final void display() {
+        System.out.println("Final method from Parent class");
+    }
+}
+
+class Child extends Parent {
+    // Попытка переопределить метод вызовет ошибку компиляции
+    // @Override
+    // public void display() {
+    //     System.out.println("Attempting to override final method");
+    // }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Parent parent = new Parent();
+        parent.display(); // Работает корректно
+    }
+}
+
+//Компилятор выдаст ошибку при попытке переопределения final метода.
