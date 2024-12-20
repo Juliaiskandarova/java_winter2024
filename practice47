@@ -1,0 +1,13 @@
+//Интерфейс, объявленный с модификатором public, доступен:
+//В любом пакете.
+//В любом классе или интерфейсе, который может видеть этот интерфейс.
+public interface Interface {
+    void method();
+}
+
+class Example implements Interface {
+    @Override
+    public void method() {
+        System.out.println("Implemented method");
+    }
+}
