@@ -1,0 +1,13 @@
+class Ex1 extends Exception {}
+class Ex2 extends Ex1 {}
+class Ex3 extends Ex2 {}
+
+public class HierarchicalExceptions {
+    public static void main(String[] args) {
+        try {
+            throw new Ex3();
+        } catch (Ex1 e) { // Общая обработка для всех исключений
+            System.out.println("Обработано исключение: " + e.getClass().getSimpleName());
+        }
+    }
+}
