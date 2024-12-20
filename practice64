@@ -1,0 +1,7 @@
+try {
+    int result = 10 / 0;
+} catch (final ArithmeticException e) {
+    // e = new ArithmeticException(); // Ошибка компиляции
+    System.out.println("Ошибка: " + e.getMessage());
+}
+//Объявление final для переменной исключения запрещает её изменение внутри блока catch.
