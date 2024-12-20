@@ -1,0 +1,14 @@
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class OutputStreamExample {
+    public static void main(String[] args) throws IOException {
+        try (FileOutputStream fos = new FileOutputStream("output.txt")) {
+            fos.write(72); // Записываем 'H'
+            fos.write(101); // Записываем 'e'
+            fos.write(108); // Записываем 'l'
+            fos.write(108); // Записываем 'l'
+            fos.write(111); // Записываем 'o'
+        }
+    }
+}
