@@ -1,0 +1,33 @@
+class Animal {
+    public String sound() {
+        return "Some sound";
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    public String sound() {
+        return "Bark";
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal animal = new Dog();
+        System.out.println(animal.sound()); // Bark
+    }
+}
+//Переопределение методов подразумевает изменение поведения метода суперкласса в подклассе.
+//Если у метода в подклассе тип возвращаемого значения не совпадает с методом в суперклассе, то компилятор выдаст ошибку.
+class Animal {
+    public String sound() {
+        return "Some sound";
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    public int sound() { // Ошибка: несовместимый тип возвращаемого значения
+        return 1;
+    }
+}
