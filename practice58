@@ -1,0 +1,17 @@
+//Метод flush() используется для принудительной записи данных из буфера в поток. Это особенно полезно в случае работы с потоками ввода/вывода, где данные могут находиться в буфере до тех пор, пока он не заполнится или поток не будет закрыт.
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+public class FlushExample {
+    public static void main(String[] args) throws IOException {
+        FileWriter writer = new FileWriter("example.txt");
+        PrintWriter printWriter = new PrintWriter(writer);
+
+        printWriter.print("Hello, World! ");
+        printWriter.flush(); // Принудительная запись данных в файл
+
+        printWriter.print("This is flushed immediately.");
+        printWriter.close();
+    }
+}
