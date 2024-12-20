@@ -1,0 +1,67 @@
+//public — Доступен отовсюду.
+//protected — Доступен внутри пакета и для классов-наследников.
+//private — Доступен только внутри класса, где определен.
+//Отсутствие спецификатора доступа (уровень доступа по умолчанию, или package-private) — Доступен только внутри одного пакета.
+//Пример программы, демонстрирующий использование всех уровней доступа:
+
+
+public class Main {
+    public static void main(String[] args) {
+        TestClass test = new TestClass();
+
+        // Доступ к public-члену
+        System.out.println("Public: " + test.publicVar);
+        test.publicMethod();
+
+        // Доступ к protected-члену (внутри одного пакета)
+        System.out.println("Protected: " + test.protectedVar);
+        test.protectedMethod();
+
+        // Доступ к package-private-члену
+        System.out.println("Package-private: " + test.packagePrivateVar);
+        test.packagePrivateMethod();
+
+        // Доступ к private-члену невозможен напрямую
+        // System.out.println("Private: " + test.privateVar); // Ошибка компиляции!
+        test.showPrivate();
+    }
+}
+
+
+
+public class TestClass {
+    public String publicVar = "Это public переменная";
+    protected String protectedVar = "Это protected переменная";
+    String packagePrivateVar = "Это package-private переменная";
+    private String privateVar = "Это private переменная";
+
+    public void publicMethod() {
+        System.out.println("Это public метод.");
+    }
+
+    protected void protectedMethod() {
+        System.out.println("Это protected метод.");
+    }
+
+    void packagePrivateMethod() {
+        System.out.println("Это package-private метод.");
+    }
+
+    private void privateMethod() {
+        System.out.println("Это private метод.");
+    }
+
+    public void showPrivate() {
+        System.out.println("Private: " + privateVar);
+        privateMethod();
+    }
+}
+
+
+public class ChildClass extends TestClass {
+    public void accessProtected() {
+        // Доступ к protected-члену через наследование
+        System.out.println("Protected из другого пакета: " + protectedVar);
+        protectedMethod();
+    }
+}
