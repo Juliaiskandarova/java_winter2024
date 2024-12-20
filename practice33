@@ -1,0 +1,34 @@
+enum TrafficLight {
+    RED(30), // Красный свет горит 30 секунд
+    YELLOW(5), // Желтый свет горит 5 секунд
+    GREEN(25); // Зеленый свет горит 25 секунд
+
+    private final int duration; // Продолжительность в секундах
+
+    TrafficLight(int duration) {
+        this.duration = duration;
+    }
+
+    public int getDuration() {
+        return duration;
+    }
+
+    public static TrafficLight nextLight(TrafficLight current) {
+        return switch (current) {
+            case RED -> GREEN;
+            case GREEN -> YELLOW;
+            case YELLOW -> RED;
+        };
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        TrafficLight current = TrafficLight.RED;
+
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Current light: " + current + " (duration: " + current.getDuration() + " seconds)");
+            current = TrafficLight.nextLight(current);
+        }
+    }
+}
